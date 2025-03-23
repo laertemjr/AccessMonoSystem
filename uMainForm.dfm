@@ -10,6 +10,8 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnActivate = FormActivate
+  OnClose = FormClose
   TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
@@ -36,6 +38,7 @@ object Form1: TForm1
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    OnKeyPress = DBGrid1KeyPress
     Columns = <
       item
         Expanded = False
@@ -92,18 +95,12 @@ object Form1: TForm1
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      
-        'Database=D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\' +
-        'Delphi\Comercial\MonoUserSystem\Win32\Debug\MonoUserSystem0.1.0.' +
-        '0.mdb'
       'DriverID=MSAcc')
-    Connected = True
     LoginPrompt = False
     Left = 48
     Top = 368
   end
   object FDTable1: TFDTable
-    Active = True
     IndexFieldNames = 'Cliente_NomeCompleto'
     Connection = FDConnection1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
