@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frmCadCli: TfrmCadCli
   Left = 0
   Top = 0
   Caption = 'Modelo de Sistema Comercial Monousu'#225'rio - Cadastro de Clientes'

@@ -129,8 +129,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="uMainForm.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="uCadCli.pas">
+            <Form>frmCadCli</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

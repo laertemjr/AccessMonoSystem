@@ -2,13 +2,13 @@ program MonoUserSystem;
 
 uses
   Vcl.Forms,
-  uMainForm in 'uMainForm.pas' {Form1};
+  uCadCli in 'uCadCli.pas' {frmCadCli};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmCadCli, frmCadCli);
   Application.Run;
 end.
