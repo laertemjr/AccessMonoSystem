@@ -14,7 +14,7 @@ Modelo de Sistema Comercial monousuário com o MS-Access | *Single-user Commerci
 
 
 ### 👉 Características / *Features*
-* Cadastro de Clientes minimalista, construído sem o uso de programação, apenas com configuração de componentes em modo design / *Minimalist Customer Registration, built without the use of programming, only with component configuration in design mode*
+* Cadastro de Clientes minimalista / *Minimalist Customer Registration*
 * Uso intuitivo / *Intuitive use*
 * Sem restrições de uso ou recursos / *No usage or feature restrictions*
 
@@ -23,7 +23,7 @@ Modelo de Sistema Comercial monousuário com o MS-Access | *Single-user Commerci
 * [![Delphi](https://img.shields.io/badge/-Delphi-E62431?logo=delphi&logoColor=white&style=plastic)](https://www.embarcadero.com/products/delphi) 12.1 Athens
 
 
-### 📌 Versão 0.1.0 - 21/03/2025 / *Version 0.1.0 - 03/21/2025*
+### 📌 Versão 0.1.0 - 23/03/2025 / *Version 0.1.0 - 03/23/2025*
 * Versão original / Original version
 
 
