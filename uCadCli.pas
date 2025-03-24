@@ -28,6 +28,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DBGrid1KeyPress(Sender: TObject; var Key: Char);
+    procedure FDTable1BeforePost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -46,6 +47,15 @@ procedure TfrmCadCli.DBGrid1KeyPress(Sender: TObject; var Key: Char);
 begin
    if DBGrid1.SelectedField <> FDTable1.FieldByName('Cliente_NomeCompleto') then Exit;
    if not (key in ['A'..'Z', 'a'..'z', #8, #32]) then Key := #0; // #8 backspace, #32 space
+end;
+
+procedure TfrmCadCli.FDTable1BeforePost(DataSet: TDataSet);
+begin
+      if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
+      begin
+         ShowMessage('Nome não pode estar sem preenchimento.');
+         Abort;
+      end;
 end;
 
 procedure TfrmCadCli.FormActivate(Sender: TObject);

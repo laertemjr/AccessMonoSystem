@@ -101,6 +101,7 @@ object frmCadCli: TfrmCadCli
     Top = 368
   end
   object FDTable1: TFDTable
+    BeforePost = FDTable1BeforePost
     IndexFieldNames = 'Cliente_NomeCompleto'
     Connection = FDConnection1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
