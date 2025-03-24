@@ -51,11 +51,11 @@ end;
 
 procedure TfrmCadCli.FDTable1BeforePost(DataSet: TDataSet);
 begin
-      if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
-      begin
-         ShowMessage('Nome não pode estar sem preenchimento.');
-         Abort;
-      end;
+   if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
+   begin
+      ShowMessage('Nome não pode estar sem preenchimento.');
+      Abort;
+   end;
 end;
 
 procedure TfrmCadCli.FormActivate(Sender: TObject);
