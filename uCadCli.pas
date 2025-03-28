@@ -61,7 +61,7 @@ end;
 procedure TfrmCadCli.FormActivate(Sender: TObject);
 var s:string;
 begin
-   s := ExtractFileName(Application.ExeName) + 'MonoUserSystem0.1.0.0.mdb';
+   s := ExtractFilePath(Application.ExeName) + 'MonoUserSystem0.1.0.0.mdb';
    if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
