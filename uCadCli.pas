@@ -59,15 +59,20 @@ begin
 end;
 
 procedure TfrmCadCli.FormActivate(Sender: TObject);
+var s:string;
 begin
-   if not FileExists(ExtractFilePath(Application.ExeName) + 'MonoUserSystem0.1.0.0.mdb') then
+   // ExtractFileDir(ExtractFileDir(ExtractFileDir(ParamStr(0)))); // Project folder
+   // ExpandFileName(GetCurrentDir + '\..\..\'); // Project folder
+   // ExpandFileName(ExtractFileDir(Application.ExeName) + '\..\..\'); // Exe folder
+   s := ExtractFileDir(ExtractFileDir(ExtractFileDir(ParamStr(0)))) + '\BD\' + 'MonoUserSystem0.1.0.0.mdb';
+   if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
       Self.Close;
    end
    else
    begin
-      FDConnection1.Params.Add('Database=' + ExtractFilePath(Application.ExeName) + 'MonoUserSystem0.1.0.0.mdb');
+      FDConnection1.Params.Add('Database=' + s);
       FDTable1.Open;
    end;
 end;
