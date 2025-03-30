@@ -1,6 +1,6 @@
 Licença MIT
 
-Copyright (c) 2025 Mancuso Software
+Copyright (c) 2025 Mancuso Software (laertemjr@outlook.com.br)
 
 A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia
 deste software e arquivos de documentação associados (o "Software"), para lidar
@@ -24,7 +24,7 @@ DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
 
 MIT License
 
-Copyright (c) 2025 Mancuso Software
+Copyright (c) 2025 Mancuso Software (laertemjr@outlook.com.br)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
