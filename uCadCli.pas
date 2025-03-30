@@ -15,7 +15,6 @@ uses
 
 type
   TfrmCadCli = class(TForm)
-    StatusBar1: TStatusBar;
     FDConnection1: TFDConnection;
     FDTable1: TFDTable;
     DataSource1: TDataSource;
@@ -25,10 +24,18 @@ type
     FDTable1Cliente_Celular: TWideStringField;
     FDPhysMSAccessDriverLink1: TFDPhysMSAccessDriverLink;
     FDTable1Cliente_NomeCompleto: TWideStringField;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
+    DBLabeledEdit3: TDBLabeledEdit;
+    DBLabeledEdit4: TDBLabeledEdit;
+    DBNavigator1: TDBNavigator;
+    StatusBar1: TStatusBar;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure DBGrid1KeyPress(Sender: TObject; var Key: Char);
     procedure FDTable1BeforePost(DataSet: TDataSet);
+    procedure DBLabeledEdit2KeyPress(Sender: TObject; var Key: Char);
+    procedure FDTable1AfterInsert(DataSet: TDataSet);
+    procedure DBLabeledEdit2Exit(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,27 +48,12 @@ var
 implementation
 
 {$R *.dfm}
-
-
-procedure TfrmCadCli.DBGrid1KeyPress(Sender: TObject; var Key: Char);
-begin
-   if DBGrid1.SelectedField <> FDTable1.FieldByName('Cliente_NomeCompleto') then Exit;
-   if not (key in ['A'..'Z', 'a'..'z', #8, #32]) then Key := #0; // #8 backspace, #32 space
-end;
-
-procedure TfrmCadCli.FDTable1BeforePost(DataSet: TDataSet);
-begin
-   if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
-   begin
-      ShowMessage('Nome não pode estar sem preenchimento.');
-      Abort;
-   end;
-end;
+// Copyright © 2025 Mancuso Software (laertemjr@outlook.com.br)
 
 procedure TfrmCadCli.FormActivate(Sender: TObject);
 var s:string;
 begin
-   s := ExtractFilePath(Application.ExeName) + 'MonoUserSystem0.1.0.0.mdb';
+   s := ExtractFilePath(Application.ExeName) + 'MonoUserSystem.mdb';
    if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
@@ -71,6 +63,38 @@ begin
    begin
       FDConnection1.Params.Add('Database=' + s);
       FDTable1.Open;
+   end;
+end;
+
+procedure TfrmCadCli.DBLabeledEdit2Exit(Sender: TObject);
+var s:string;
+begin
+   if DataSource1.State in [dsEdit, dsInsert] then
+   begin
+      s := Trim(DBLabeledEdit2.Text);
+      DBLabeledEdit2.Field.AsString := s;
+   end;
+end;
+
+procedure TfrmCadCli.DBLabeledEdit2KeyPress(Sender: TObject; var Key: Char);
+begin
+   if not (key in ['A'..'Z', 'a'..'z', #8, #32]) then Key := #0; // #8 backspace, #32 space
+end;
+
+procedure TfrmCadCli.FDTable1AfterInsert(DataSet: TDataSet);
+begin
+   DBLabeledEdit2.SetFocus;
+   DBLabeledEdit2.SelLength := 0;
+end;
+
+procedure TfrmCadCli.FDTable1BeforePost(DataSet: TDataSet);
+var s:String;
+begin
+   if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
+   begin
+      ShowMessage('Nome não pode estar sem preenchimento.');
+      DBLabeledEdit2.SetFocus;
+      Abort;
    end;
 end;
 
