@@ -28,6 +28,7 @@ object frmCadCli: TfrmCadCli
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    OnTitleClick = DBGrid1TitleClick
     Columns = <
       item
         Expanded = False

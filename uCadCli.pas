@@ -36,6 +36,7 @@ type
     procedure DBLabeledEdit2KeyPress(Sender: TObject; var Key: Char);
     procedure FDTable1AfterInsert(DataSet: TDataSet);
     procedure DBLabeledEdit2Exit(Sender: TObject);
+    procedure DBGrid1TitleClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -64,6 +65,11 @@ begin
       FDConnection1.Params.Add('Database=' + s);
       FDTable1.Open;
    end;
+end;
+
+procedure TfrmCadCli.DBGrid1TitleClick(Column: TColumn);
+begin
+   TFDTable(DBGrid1.DataSource.DataSet).IndexFieldNames := Column.FieldName;
 end;
 
 procedure TfrmCadCli.DBLabeledEdit2Exit(Sender: TObject);
