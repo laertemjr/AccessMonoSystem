@@ -37,6 +37,7 @@ type
     procedure FDTable1AfterInsert(DataSet: TDataSet);
     procedure DBLabeledEdit2Exit(Sender: TObject);
     procedure DBGrid1TitleClick(Column: TColumn);
+    procedure DBLabeledEdit3KeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -87,6 +88,12 @@ begin
    if (not(Key in ['A' .. 'Z', 'a' .. 'z', 'ê', 'ô', 'ã', 'õ', 'á',
                    'é', 'í', 'ó', 'ú', 'ç', 'ü', 'Ê', 'Ô', 'Ã', 'Õ', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ç', 'Ü', #8, #32, #39])) then
       Key := #0; // #8 backspace, #32 space, #39 aspas simples
+end;
+
+procedure TfrmCadCli.DBLabeledEdit3KeyPress(Sender: TObject; var Key: Char);
+begin
+   if (not(Key in ['A' .. 'Z', 'a' .. 'z', '0' .. '9' , '_', '.', '-', '@', #8])) then
+      Key := #0; // #8 backspace
 end;
 
 procedure TfrmCadCli.FDTable1AfterInsert(DataSet: TDataSet);

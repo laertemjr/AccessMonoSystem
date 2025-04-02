@@ -131,6 +131,7 @@ object frmCadCli: TfrmCadCli
     DataField = 'Cliente_Email'
     DataSource = DataSource1
     TabOrder = 2
+    OnKeyPress = DBLabeledEdit3KeyPress
     EditLabel.Width = 35
     EditLabel.Height = 15
     EditLabel.Caption = 'e-Mail'
@@ -178,7 +179,7 @@ object frmCadCli: TfrmCadCli
       item
         BiDiMode = bdLeftToRight
         ParentBiDiMode = False
-        Text = '   Vers'#227'o 0.1.1.0 (2025) Delphi 12.1'
+        Text = '   Vers'#227'o 0.1.1.1 (2025) Delphi 12.1'
         Width = 310
       end
       item
