@@ -84,7 +84,9 @@ end;
 
 procedure TfrmCadCli.DBLabeledEdit2KeyPress(Sender: TObject; var Key: Char);
 begin
-   if not (key in ['A'..'Z', 'a'..'z', #8, #32]) then Key := #0; // #8 backspace, #32 space
+   if (not(Key in ['A' .. 'Z', 'a' .. 'z', 'ê', 'ô', 'ã', 'õ', 'á',
+                   'é', 'í', 'ó', 'ú', 'ç', 'ü', 'Ê', 'Ô', 'Ã', 'Õ', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ç', 'Ü', #8, #32, #39])) then
+      Key := #0; // #8 backspace, #32 space, #39 aspas simples
 end;
 
 procedure TfrmCadCli.FDTable1AfterInsert(DataSet: TDataSet);
