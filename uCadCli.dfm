@@ -179,7 +179,7 @@ object frmCadCli: TfrmCadCli
       item
         BiDiMode = bdLeftToRight
         ParentBiDiMode = False
-        Text = '   Vers'#227'o 0.1.1.1 (2025) Delphi 12.1'
+        Text = '   Vers'#227'o '
         Width = 310
       end
       item

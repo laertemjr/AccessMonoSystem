@@ -40,6 +40,7 @@ type
     procedure DBLabeledEdit3KeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
+    function GetVersionInfo(const app:string):string;
   public
     { Public declarations }
   end;
@@ -66,6 +67,7 @@ begin
       FDConnection1.Params.Add('Database=' + s);
       FDTable1.Open;
    end;
+   StatusBar1.Panels[0].Text := 'Versão ' + GetVersionInfo(Application.ExeName) + ' (2025) Delphi 12.1';
 end;
 
 procedure TfrmCadCli.DBGrid1TitleClick(Column: TColumn);
@@ -111,6 +113,33 @@ begin
       DBLabeledEdit2.SetFocus;
       Abort;
    end;
+end;
+
+function TfrmCadCli.GetVersionInfo(const app: string): string;
+type
+  TVersionInfo = packed record
+    Dummy: array[0..7] of Byte;
+    V2, V1, V4, V3: Word;
+  end;
+var
+  Zero, Size: Cardinal;
+  Data: Pointer;
+  VersionInfo: ^TVersionInfo;
+begin
+  Size := GetFileVersionInfoSize(Pointer(app), Zero);
+  if Size = 0 then
+    Result := ''
+  else
+  begin
+    GetMem(Data, Size);
+    try
+      GetFileVersionInfo(Pointer(app), 0, Size, Data);
+      VerQueryValue(Data, '\', Pointer(VersionInfo), Size);
+      Result := VersionInfo.V1.ToString + '.' + VersionInfo.V2.ToString + '.' + VersionInfo.V3.ToString + '.' + VersionInfo.V4.ToString;
+    finally
+      FreeMem(Data);
+    end;
+  end;
 end;
 
 procedure TfrmCadCli.FormClose(Sender: TObject; var Action: TCloseAction);
