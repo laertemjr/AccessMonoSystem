@@ -105,7 +105,6 @@ begin
 end;
 
 procedure TfrmCadCli.FDTable1BeforePost(DataSet: TDataSet);
-var s:String;
 begin
    if Trim(FDTable1Cliente_NomeCompleto.AsString) = EmptyStr then
    begin
