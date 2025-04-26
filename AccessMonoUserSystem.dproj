@@ -6,10 +6,10 @@
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectName Condition="'$(ProjectName)'==''">AccessMonoSystem</ProjectName>
+        <ProjectName Condition="'$(ProjectName)'==''">AccessMonoUserSystem</ProjectName>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
-        <MainSource>AccessMonoSystem.dpr</MainSource>
+        <MainSource>AccessMonoUserSystem.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -59,7 +59,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\Comercial\AccessMonoUserSystem\DCUs\</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
@@ -70,7 +70,7 @@
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
-        <SanitizedProjectName>AccessMonoSystem</SanitizedProjectName>
+        <SanitizedProjectName>AccessMonoUserSystem</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>JvNet;vclwinx;fs29;fmx;FMXfrLanguageSlovak29;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FMXfrCoreLibrary29;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;frxADOQueryBuilder29;dbxcds;vcledge;fcxp29;frLanguageSlovak29;frLanguageHungarian29;FMXfrLanguageLatvian29;FMXfrLanguageUkrainian29;FMXfrLanguageDutch29;JvAppFrm;FireDACSqliteDriver;DbxClientDriver;JclVcl;soapmidas;frLanguageArabic29;frCoreLibrary29;Jcl;dbexpress;frLanguageCatalon29;frxFDQueryBuilder29;JvManagedThreads;Python;frLanguageBrazil29;frLanguageCzech29;FMXfrxDBX29;FMXfrLanguageSwiss29;inet;PythonVcl;vcltouch;RtmRxDB290;JvDB;fmxdae;FMXfrLanguageTurkish29;JvCustom;CustomIPTransport;FMXfrLanguageBrazil129;FMXfrLanguageCzech29;JvSystem;JvControls;frLanguageItalian29;FMXfsDB29;frxPDF29;fqbFD29;frLanguageSwiss29;JvCrypt;JvJans;JvMM;IndySystem;FMXfsADO29;frxe29;frLanguageSwedish29;JvGlobus;ibxbindings;FMXfrLanguagePolish29;frLanguageUkrainian29;fsDB29;JclContainers;JvPageComps;vclFireDAC;FireDACCommon;frLanguageDanish29;bindcompdbx;fcx29;FMXfrLanguageLithuanian29;rtl;FireDACMySQLDriver;FMXfrLanguageGerman29;fqb29;frLanguageLithuanian29;DBXSqliteDriver;frLanguageFrench29;frLanguageRussian29;JvRuntimeDesign;JvXPCtrls;RtmRxCtl290;frxSM29;vclimg;FMXfrLanguageBrazil229;inetdbxpress;FireDAC;JvDocking;JvDlgs;xmlrtl;ibxpress;dsnap;frFDDataLibrary29;frLanguageSerbian29;JvCmp;FMXfrLanguageRussian29;frLanguageFarsi29;FMXfrLanguageFrench29;fmxobj;bindcompvclsmp;frx29;FMXfrLanguageHebrew29;vclib;FMXfrLanguageCroatian29;frLanguageChinese29;frControlsLibrary29;frxQueryBuilder29;FMXfrxADO29;frxIntIOIndy29;frLanguageHebrew29;fqbADO29;FMXfrLanguageBulgarian29;FMXfrxCDS29;frxDB29;fqbDBX29;frLocalizationLibrary29;FireDACCommonDriver;FMXfcxd29;IndyIPClient;frxHTML29;bindcompvclwinx;frLanguageTaiwan29;FMXfrLanguageArabic29;bindcompfmx;frxDBXQueryBuilder29;frLanguageRomanian29;frLanguageGerman29;JvBands;inetdb;FMXfrLanguageItalian29;frLanguageIndonesian29;ibmonitor;FMXfrLanguageSpanish29;FMXfcxed29;frLanguageBrazil229;vclactnband;FMXfrxDB29;fmxFireDAC;frLanguageCroatian29;DBXMySQLDriver;FMXfs29;fsADO29;VclSmp;FMXfrxFD29;fmxase;FMXfrLanguageFarsi29;JvPluginSystem;FMXfrLanguageTaiwan29;JvTimeFramework;dbrtl;Skia.Package.FMX;FMXfrLanguageChinese29;FMXfrLanguagePortuguese29;FireDACMSAccDriver;frxcs29;FMXfrLanguageJapanese29;frLanguageSlovene29;JclDeveloperTools;frADODataLibrary29;frLanguageTurkish29;vcldsnap;DBXInterBaseDriver;fcxe29;frLanguageGreek29;JvWizards;Skia.Package.VCL;frLanguageBrazil129;vcldb;FMXfrLanguageCatalon29;FMXfrLanguageHungarian29;SynEditDR;JvCore;bindcomp;frLanguageLatvian29;pkgHelloWorld;IndyCore;RESTBackendComponents;frLanguageSpanish29;frxIntIO29;FMXfrx29;frLanguageJapanese29;frSmartMemo29;FireDACADSDriver;frxFD29;RESTComponents;FMXfrLanguageDanish29;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;FMXfrLanguageSlovene29;fsFD29;JvHMI;FMXfrLanguageSerbian29;FMXfrxe29;JvDotNetCtrls;frxADO29;FMXfrLanguageIndonesian29;FMXfrLanguageSwedish29;frLanguageDutch29;FireDACPgDriver;JvPrintPreview;fqbSM29;frLanguagePortuguese29;tethering;JvStdCtrls;frLanguageBulgarian29;frLanguagePolish29;bindcompvcl;frxDBX29;FMXfrLanguageBrazil29;CloudService;FMXfrLanguageGreek29;PythonFmx;FMXfcxpd29;FMXfrLocalizationLibrary29;frGraphicsLibrary29;soaprtl;FMXfrLanguageRomanian29;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -83,7 +83,7 @@
         <VerInfo_MajorVer>0</VerInfo_MajorVer>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-        <DCC_DcuOutput>D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\Delphi\Comercial\MonoUserSystem\DCUs\</DCC_DcuOutput>
+        <DCC_DcuOutput>D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\Comercial\AccessMonoUserSystem\DCUs\</DCC_DcuOutput>
         <VerInfo_Release>1</VerInfo_Release>
         <VerInfo_Build>3</VerInfo_Build>
     </PropertyGroup>
@@ -105,7 +105,7 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
         <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
         <DCC_RangeChecking>true</DCC_RangeChecking>
-        <DCC_DcuOutput>D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\Delphi\Comercial\MonoUserSystem\DCUs\</DCC_DcuOutput>
+        <DCC_DcuOutput>D:\OneDrive\Documentos\Embarcadero\Studio\Projects\Git\Comercial\AccessMonoUserSystem\DCUs\</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
@@ -164,9 +164,29 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">AccessMonoSystem.dpr</Source>
+                    <Source Name="MainSource">AccessMonoUserSystem.dpr</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsADO29.bpl">FastScript FMX - ADO Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsDB29.bpl">FastScript FMX - DB Components by Fast Reports Inc</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvSystemDesign290.bpl">JVCL System Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvStdCtrlsDesign290.bpl">JVCL Standard Controls</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCmpDesign290.bpl">JVCL Non-Visual Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCustomDesign290.bpl">JVCL Custom Controls</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvDlgsDesign290.bpl">JVCL Dialog Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCryptDesign290.bpl">JVCL Encryption and Compression</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvMMDesign290.bpl">JVCL Multimedia and Image Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvNetDesign290.bpl">JVCL Network Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvAppFrmDesign290.bpl">JVCL Application and Form Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvDBDesign290.bpl">JVCL Database Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPluginSystemDesign290.bpl">JVCL Plugin Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvJansDesign290.bpl">JVCL Jans Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvGlobusDesign290.bpl">JVCL Globus Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPrintPreviewDesign290.bpl">JVCL Print Preview Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPageCompsDesign290.bpl">JVCL Page Style Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvWizardsDesign290.bpl">JVCL Wizard</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvTimeFrameworkDesign290.bpl">JVCL Time Framework</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvHMIDesign290.bpl">JVCL HMI Controls</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfcxc29.bpl">FastCube VCL - Charting Components by Fast Reports Inc</Excluded_Packages>
@@ -186,9 +206,9 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\AccessMonoSystem.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\AccessMonoUserSystem.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>AccessMonoSystem.exe</RemoteName>
+                        <RemoteName>AccessMonoUserSystem.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
