@@ -1,7 +1,9 @@
 object frmCadCli: TfrmCadCli
   Left = 0
   Top = 0
-  Caption = 'Modelo de Sistema Comercial Monousu'#225'rio - Cadastro de Clientes'
+  Caption = 
+    'Modelo de Sistema Comercial monousu'#225'rio com o MS-Access - Cadast' +
+    'ro de Clientes'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace

@@ -56,7 +56,7 @@ implementation
 procedure TfrmCadCli.FormActivate(Sender: TObject);
 var s:string;
 begin
-   s := ExtractFilePath(Application.ExeName) + 'MonoUserSystem.mdb';
+   s := ExtractFilePath(Application.ExeName) + 'MonoUserSystem_v1.mdb';
    if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
