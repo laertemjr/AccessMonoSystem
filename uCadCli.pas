@@ -64,8 +64,14 @@ begin
    end
    else
    begin
-      FDConnection1.Params.Add('Database=' + s);
-      FDTable1.Open;
+      try
+         FDConnection1.Params.Add('Database=' + s);
+         FDConnection1.Connected := True;
+         FDTable1.Open;
+      except
+         ShowMessage('Não foi possível conectar o banco de dados.');
+         Self.Close;
+      end;
    end;
    StatusBar1.Panels[0].Text := 'Versão ' + GetVersionInfo(Application.ExeName) + ' (2025) Delphi 12.1';
 end;
