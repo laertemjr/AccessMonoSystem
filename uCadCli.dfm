@@ -108,7 +108,7 @@ object frmCadCli: TfrmCadCli
   object DBLabeledEdit2: TDBLabeledEdit
     Left = 71
     Top = 40
-    Width = 252
+    Width = 250
     Height = 23
     DataField = 'Cliente_NomeCompleto'
     DataSource = DataSource1
@@ -128,7 +128,7 @@ object frmCadCli: TfrmCadCli
   object DBLabeledEdit3: TDBLabeledEdit
     Left = 329
     Top = 40
-    Width = 200
+    Width = 190
     Height = 23
     DataField = 'Cliente_Email'
     DataSource = DataSource1
@@ -145,9 +145,9 @@ object frmCadCli: TfrmCadCli
     EditLabel.ParentFont = False
   end
   object DBLabeledEdit4: TDBLabeledEdit
-    Left = 535
+    Left = 525
     Top = 40
-    Width = 81
+    Width = 91
     Height = 23
     DataField = 'Cliente_Celular'
     DataSource = DataSource1

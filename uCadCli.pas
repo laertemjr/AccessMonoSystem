@@ -5,13 +5,16 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, FireDAC.Stan.Intf,
-  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
-  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
-  FireDAC.Phys.MSAcc, FireDAC.Phys.MSAccDef, FireDAC.VCLUI.Wait,
-  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+
+  FireDAC.Phys,
+  FireDAC.Phys.MSAcc,
+
   Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids,
-  FireDAC.Phys.ODBCBase;
+  FireDAC.Phys.ODBCBase, FireDAC.Stan.Option, FireDAC.Stan.Error,
+  FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Stan.Async, FireDAC.Phys.MSAccDef, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt;
 
 type
   TfrmCadCli = class(TForm)
@@ -54,9 +57,10 @@ implementation
 // Copyright © 2025 Mancuso Software (laertemjr@outlook.com.br)
 
 procedure TfrmCadCli.FormActivate(Sender: TObject);
-var s:string;
 begin
-   s := ExtractFilePath(Application.ExeName) + 'MonoUS_v1.mdb';
+   StatusBar1.Panels[0].Text := 'Versão ' + GetVersionInfo(Application.ExeName) + ' (2025) Delphi 12.1';
+
+   var s : string := ExtractFilePath(Application.ExeName) + 'MonoUS_v1.mdb';
    if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
@@ -66,14 +70,16 @@ begin
    begin
       try
          FDConnection1.Params.Add('Database=' + s);
+         Screen.Cursor := crSQLWait;
          FDConnection1.Connected := True;
+         Screen.Cursor := crDefault;
          FDTable1.Open;
       except
-         ShowMessage('Não foi possível conectar o banco de dados.');
+         ShowMessage('Não foi possível conectar com o banco de dados.');
+         Screen.Cursor := crDefault;
          Self.Close;
       end;
    end;
-   StatusBar1.Panels[0].Text := 'Versão ' + GetVersionInfo(Application.ExeName) + ' (2025) Delphi 12.1';
 end;
 
 procedure TfrmCadCli.DBGrid1TitleClick(Column: TColumn);
