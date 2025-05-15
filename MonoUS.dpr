@@ -1,4 +1,4 @@
-program MonoUserSystem;
+program MonoUS;
 
 uses
   Vcl.Forms,
