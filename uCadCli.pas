@@ -60,7 +60,7 @@ procedure TfrmCadCli.FormActivate(Sender: TObject);
 begin
    StatusBar1.Panels[0].Text := 'Versão ' + GetVersionInfo(Application.ExeName) + ' (2025) Delphi 12.1';
 
-   var s : string := ExtractFilePath(Application.ExeName) + 'MonoUS_v1.mdb';
+   var s : string := ExtractFilePath(Application.ExeName) + 'MonoUS.mdb';
    if not FileExists(s) then
    begin
       ShowMessage('Banco de dados não localizado no mesmo diretório do programa.');
