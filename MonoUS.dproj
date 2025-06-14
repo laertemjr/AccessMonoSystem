@@ -90,9 +90,14 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=0.1.1.5;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=0.1.1.5;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_Build>5</VerInfo_Build>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -117,6 +122,12 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_Build>5</VerInfo_Build>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -135,6 +146,12 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_Build>5</VerInfo_Build>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -165,42 +182,8 @@
                     <Source Name="MainSource">MonoUS.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsADO29.bpl">FastScript FMX - ADO Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsDB29.bpl">FastScript FMX - DB Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvSystemDesign290.bpl">JVCL System Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvStdCtrlsDesign290.bpl">JVCL Standard Controls</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCmpDesign290.bpl">JVCL Non-Visual Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCustomDesign290.bpl">JVCL Custom Controls</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvDlgsDesign290.bpl">JVCL Dialog Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvCryptDesign290.bpl">JVCL Encryption and Compression</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvMMDesign290.bpl">JVCL Multimedia and Image Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvNetDesign290.bpl">JVCL Network Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvAppFrmDesign290.bpl">JVCL Application and Form Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvDBDesign290.bpl">JVCL Database Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPluginSystemDesign290.bpl">JVCL Plugin Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvJansDesign290.bpl">JVCL Jans Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvGlobusDesign290.bpl">JVCL Globus Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPrintPreviewDesign290.bpl">JVCL Print Preview Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvPageCompsDesign290.bpl">JVCL Page Style Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvWizardsDesign290.bpl">JVCL Wizard</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvTimeFrameworkDesign290.bpl">JVCL Time Framework</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\JvHMIDesign290.bpl">JVCL HMI Controls</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfcxc29.bpl">FastCube VCL - Charting Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfcxpTee29.bpl">FastCube VCL -  Fast Report integration TeeChart by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfqbIBX29.bpl">FastQueryBuilder - IBX Engine by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfrxIBX29.bpl">FastReport VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfrxTee29.bpl">FastReport VCL - Tee Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfsIBX29.bpl">FastScript VCL - IBX Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\dclfsTee29.bpl">FastScript VCL - Tee Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\VCL\Win32\frxIBXQueryBuilder29.bpl">FastReport VCL - FastQueryBuilder - IBX by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfcxcd29.bpl">FastCube FMX - Charting Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfcxpTeed29.bpl">FastCube FMX - FastReport integration TeeChart by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfrxIBX29.bpl">FastReport FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfrxTee29.bpl">FastReport FMX - Tee Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsIBX29.bpl">FastScript FMX - IBX Components by Fast Reports Inc</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\Fast Reports\VCL\2024.2.7\Trial\LibRS29\FMX\Win32\dclFMXfsTee29.bpl">FastScript FMX - Tee Components by Fast Reports Inc</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
